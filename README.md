@@ -1,2 +1,2 @@
 # libft
-Project about creating a simple C library with some useful basic function to use in future 42 projects
+Project about creating a simple C library with some useful basic function to use in future projects
