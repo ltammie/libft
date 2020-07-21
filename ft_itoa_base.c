@@ -4,7 +4,8 @@ static int	get_size(int value, int base, int flag)
 {
 	int		size;
 
-	while (tmp /= base)
+	size = 0;
+	while (value /= base)
 		size++;
 	return (size + flag + 1);
 }
