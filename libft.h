@@ -148,4 +148,14 @@ int					ft_isblank(int c);
 int					ft_iscntrl(int c);
 
 int					ft_count_words(char const *s, char c);
+
+int					ft_abs(int n);
+
+int					ft_char_int_str(const char *s, int c);
+
+char				*ft_itoa_base(int value, int base);
+
+char				*ft_utoa(unsigned int n);
+
+char				*ft_utoa_base(unsigned int value, int base);
 #endif
