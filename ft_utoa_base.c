@@ -6,7 +6,7 @@ static int	get_size(unsigned int value, int base)
 
 	while (tmp /= base)
 		size++;
-	return (size + 1;)
+	return (size + 1);
 }
 
 char		*ft_utoa_base(unsigned int value, int base)
@@ -22,7 +22,7 @@ char		*ft_utoa_base(unsigned int value, int base)
 	if (base < 2 || base > 16)
 		return (0);
 	tmp = value;
-	size = get_size(tmp, base)
+	size = get_size(tmp, base);
 	str = (char *)malloc(sizeof(char) * size  + 1);
 	str[size] = '\0';
 	if (flag == 1)
