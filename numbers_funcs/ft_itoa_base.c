@@ -1,4 +1,5 @@
 #include "../includes/libft.h"
+
 static	int		get_size(int value, int base, int flag)
 {
 	int		size;

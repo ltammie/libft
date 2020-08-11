@@ -1,4 +1,5 @@
 #include "../includes/libft.h"
+
 char	*ft_strchr(const char *s, int c)
 {
 	unsigned char	sym;
