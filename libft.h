@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ltammie <ltammie@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/08/07 17:40:47 by ltammie           #+#    #+#             */
+/*   Updated: 2020/08/07 17:40:47 by ltammie          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LIBFT_H
 # define LIBFT_H
 
@@ -158,4 +170,17 @@ char				*ft_itoa_base(int value, int base);
 char				*ft_utoa(unsigned int n);
 
 char				*ft_utoa_base(unsigned int value, int base);
+
+char				*ft_ulltoa_base(unsigned long long value, int base);
+
+void				ft_str_to_lower(char **str);
+
+char				*ft_lltoa(long long n);
+
+char				*ft_ftoa(double n, int precision);
+
+char				*ft_lftoa(long double n, int precision);
+
+char				*ft_strjoin_free(char **s1, char **s2);
+
 #endif

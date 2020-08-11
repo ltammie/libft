@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: ltammie <ltammie@student.42.fr>            +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2020/08/07 17:40:54 by ltammie           #+#    #+#              #
+#    Updated: 2020/08/07 17:40:57 by ltammie          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 GCC = gcc $(FLAGS)
 FLAGS = -Wall -Wextra -Werror
 NAME = libft.a
@@ -70,7 +82,12 @@ SRCS = ft_atoi.c\
 		ft_char_in_str.c\
 		ft_abs.c\
 		ft_itoa_base.c\
-		ft_utoa_base.c
+		ft_utoa_base.c\
+		ft_ulltoa_base.c\
+		ft_str_to_lower.c\
+		ft_lltoa.c\
+		ft_strjoin_free.c
+
 
 INC = libft.h
 OBJ = $(SRCS:.c=.o)

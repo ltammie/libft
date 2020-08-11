@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_str_to_lower.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ltammie <ltammie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/07 17:38:43 by ltammie           #+#    #+#             */
-/*   Updated: 2020/08/07 17:38:43 by ltammie          ###   ########.fr       */
+/*   Created: 2020/08/07 17:38:45 by ltammie           #+#    #+#             */
+/*   Updated: 2020/08/07 17:38:45 by ltammie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char const *s, int fd)
+void	ft_str_to_lower(char **str)
 {
-	if (fd == -1)
-		return ;
-	while (*s)
+	int		i;
+
+	i = 0;
+	while ((*str)[i])
 	{
-		ft_putchar_fd(*s, fd);
-		s++;
+		(*str)[i] = ft_tolower((*str)[i]);
+		i++;
 	}
 }

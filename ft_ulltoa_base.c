@@ -1,50 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_ulltoa_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ltammie <ltammie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/07 17:36:41 by ltammie           #+#    #+#             */
-/*   Updated: 2020/08/07 17:36:41 by ltammie          ###   ########.fr       */
+/*   Created: 2020/08/07 17:40:24 by ltammie           #+#    #+#             */
+/*   Updated: 2020/08/07 17:40:24 by ltammie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		nbr_length(long int n)
+static int	get_size(unsigned long long value, int base)
 {
-	int size;
+	int		size;
 
 	size = 0;
-	if (n <= 0)
-		size = 1;
-	while (n != 0)
-	{
-		n = n / 10;
+	while (value /= base)
 		size++;
-	}
-	return (size);
+	return (size + 1);
 }
 
-char			*ft_itoa(int n)
+char		*ft_ulltoa_base(unsigned long long value, int base)
 {
-	long long int	tmp_n;
-	int				len;
-	char			*nbr;
+	char				*str;
+	int					size;
+	char				*tab;
 
-	tmp_n = (long long int)n;
-	len = nbr_length(tmp_n);
-	if (!(nbr = ft_strnew(len)))
+	tab = "0123456789ABCDEF";
+	if (base < 2 || base > 16)
+		return (0);
+	size = get_size(value, base);
+	if (!(str = ft_strnew(size)))
 		return (NULL);
-	if (tmp_n < 0)
-		tmp_n = tmp_n * -1;
-	while (len)
+	while (size > 0)
 	{
-		nbr[--len] = tmp_n % 10 + '0';
-		tmp_n = tmp_n / 10;
+		str[size - 1] = tab[ft_abs((int)(value % base))];
+		size--;
+		value /= base;
 	}
-	if (n < 0)
-		nbr[0] = '-';
-	return (nbr);
+	return (str);
 }

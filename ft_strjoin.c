@@ -1,28 +1,38 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ltammie <ltammie@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/08/07 17:39:13 by ltammie           #+#    #+#             */
+/*   Updated: 2020/08/07 17:39:13 by ltammie          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	i;
-	size_t	len1;
-	size_t	len2;
-	char	*new_str;
+	char	*arr;
 
-	i = -1;
-	if (!s1 && !s2)
-		return (NULL);
-	if (!s1)
-		return (ft_strdup(s2));
-	if (!s2)
-		return (ft_strdup(s1));
-	len1 = ft_strlen(s1);
-	len2 = ft_strlen(s2);
-	if (!(new_str = ft_strnew(len1 + len2)))
-		return (NULL);
-	while (++i < len1)
-		new_str[i] = s1[i];
-	i = 0;
-	while (i < len2)
-		new_str[len1++] = s2[i++];
-	new_str[len1 + len2 + 1] = '\0';
-	return (new_str);
+	if (s1 && s2)
+		arr = ft_strnew(ft_strlen(s1) + ft_strlen(s2));
+	else if (s1)
+	{
+		arr = ft_strdup(s1);
+		return (arr);
+	}
+	else if (s2)
+	{
+		arr = ft_strdup(s2);
+		return (arr);
+	}
+	if (s1 && s2)
+	{
+		arr = ft_strcpy(arr, s1);
+		arr = ft_strcat(arr, s2);
+		return (arr);
+	}
+	return (NULL);
 }

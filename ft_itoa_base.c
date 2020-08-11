@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ltammie <ltammie@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/08/07 17:36:44 by ltammie           #+#    #+#             */
+/*   Updated: 2020/08/07 17:38:17 by ltammie          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-static int	get_size(int value, int base, int flag)
+static	int		get_size(int value, int base, int flag)
 {
 	int		size;
 
@@ -10,8 +22,7 @@ static int	get_size(int value, int base, int flag)
 	return (size + flag + 1);
 }
 
-
-char		*ft_itoa_base(int value, int base)
+char			*ft_itoa_base(int value, int base)
 {
 	char	*str;
 	int		size;
@@ -20,7 +31,6 @@ char		*ft_itoa_base(int value, int base)
 	int		tmp;
 
 	flag = 0;
-	size = 0;
 	tab = "0123456789ABCDEF";
 	if (base < 2 || base > 16)
 		return (0);
@@ -28,7 +38,7 @@ char		*ft_itoa_base(int value, int base)
 		flag = 1;
 	tmp = value;
 	size = get_size(tmp, base, flag);
-	str = (char *)malloc(sizeof(char) * size  + 1);
+	str = (char *)malloc(sizeof(char) * size + 1);
 	str[size] = '\0';
 	if (flag == 1)
 		str[0] = '-';
@@ -36,7 +46,7 @@ char		*ft_itoa_base(int value, int base)
 	{
 		str[size - 1] = tab[ft_abs(value % base)];
 		size--;
-		value /=base;
+		value /= base;
 	}
 	return (str);
 }
