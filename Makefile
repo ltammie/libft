@@ -8,6 +8,7 @@ LST_DIR = list_funcs/
 MEM_DIR = memory_funcs/
 NUM_DIR = numbers_funcs/
 PRINT_DIR = print_funcs/
+PRINT_F_DIR = print_funcs/printf_src/
 READ_DIR = read_funcs/
 STR_DIR = string_funcs/
 UTIL_DIR = utility_funcs/
@@ -44,6 +45,27 @@ SRCS = $(LST_DIR)ft_lstadd.c\
 		$(PRINT_DIR)ft_putnbr_fd.c\
 		$(PRINT_DIR)ft_putstr.c\
 		$(PRINT_DIR)ft_putstr_fd.c\
+		$(PRINT_F_DIR)c_pr.c\
+		$(PRINT_F_DIR)cast.c\
+		$(PRINT_F_DIR)di_pr.c\
+		$(PRINT_F_DIR)f_pr.c\
+		$(PRINT_F_DIR)float_utils.c\
+		$(PRINT_F_DIR)float_utils2.c\
+		$(PRINT_F_DIR)float_utils3.c\
+		$(PRINT_F_DIR)long_arithmetics.c\
+		$(PRINT_F_DIR)long_arithmetics2.c\
+		$(PRINT_F_DIR)parse.c\
+		$(PRINT_F_DIR)parse_flags.c\
+		$(PRINT_F_DIR)parse_length.c\
+		$(PRINT_F_DIR)parse_precision.c\
+		$(PRINT_F_DIR)parse_type.c\
+		$(PRINT_F_DIR)parse_width.c\
+		$(PRINT_F_DIR)percent_pr.c\
+		$(PRINT_F_DIR)pointer_pr.c\
+		$(PRINT_F_DIR)pr.c\
+		$(PRINT_F_DIR)s_pr.c\
+		$(PRINT_F_DIR)uox_pr.c\
+		$(PRINT_F_DIR)utils.c\
 		$(READ_DIR)get_next_line.c\
 		$(STR_DIR)ft_char_in_str.c\
 		$(STR_DIR)ft_count_words.c\
