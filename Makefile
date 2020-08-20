@@ -45,6 +45,7 @@ SRCS = $(LST_DIR)ft_lstadd.c\
 		$(PRINT_DIR)ft_putnbr_fd.c\
 		$(PRINT_DIR)ft_putstr.c\
 		$(PRINT_DIR)ft_putstr_fd.c\
+		$(PRINT_DIR)ft_printf.c\
 		$(PRINT_F_DIR)c_pr.c\
 		$(PRINT_F_DIR)cast.c\
 		$(PRINT_F_DIR)di_pr.c\

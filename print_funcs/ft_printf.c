@@ -1,4 +1,4 @@
-#include "../../includes/libft.h"
+#include "../includes/libft.h"
 
 static	int		print_all(const char *format, va_list ap)
 {
