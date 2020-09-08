@@ -12,6 +12,11 @@
 # include <limits.h>
 # include "ft_printf.h"
 
+#ifdef __APPLE__
+#else
+# define OPEN_MAX 10240
+#endif
+
 typedef struct		s_list
 {
 	void			*content;
