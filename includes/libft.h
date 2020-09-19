@@ -56,6 +56,7 @@ void				*ft_memset(void *s, int c, size_t len);
 
 int					ft_abs(int n);
 int					ft_atoi(const char *str);
+float				ft_atof(const char *str);
 char				*ft_itoa(int n);
 char				*ft_itoa_base(int value, int base);
 char				*ft_lltoa(long long n);
@@ -89,6 +90,7 @@ int					get_next_line(const int fd, char **line);
 
 int					ft_char_int_str(const char *s, int c);
 int					ft_count_words(char const *s, char c);
+int					ft_count_words_split(const char **s);
 void				ft_str_to_lower(char **str);
 char				*ft_strcat(char *s1, const char *s2);
 char				*ft_strchr(const char *s, int c);
@@ -115,6 +117,7 @@ char				*ft_strnstr(const char *haystack,
 								const char *needle, size_t len);
 char				*ft_strrchr(const char *s, int c);
 char				**ft_strsplit(char const *s, char c);
+char				**ft_strsplit_space(char const *s);
 char				*ft_strstr(const char *haystack, const char *needle);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strtrim(char const *s);

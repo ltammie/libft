@@ -31,6 +31,7 @@ SRCS = $(LST_DIR)ft_lstadd.c\
 		$(MEM_DIR)ft_memset.c\
 		$(NUM_DIR)ft_abs.c\
 		$(NUM_DIR)ft_atoi.c\
+		$(NUM_DIR)ft_atof.c\
 		$(NUM_DIR)ft_itoa.c\
 		$(NUM_DIR)ft_itoa_base.c\
 		$(NUM_DIR)ft_lltoa.c\
@@ -70,6 +71,7 @@ SRCS = $(LST_DIR)ft_lstadd.c\
 		$(READ_DIR)get_next_line.c\
 		$(STR_DIR)ft_char_in_str.c\
 		$(STR_DIR)ft_count_words.c\
+		$(STR_DIR)ft_count_words_split.c\
 		$(STR_DIR)ft_str_to_lower.c\
 		$(STR_DIR)ft_strcat.c\
 		$(STR_DIR)ft_strchr.c\
@@ -95,6 +97,7 @@ SRCS = $(LST_DIR)ft_lstadd.c\
 		$(STR_DIR)ft_strnstr.c\
 		$(STR_DIR)ft_strrchr.c\
 		$(STR_DIR)ft_strsplit.c\
+		$(STR_DIR)ft_strsplit_space.c\
 		$(STR_DIR)ft_strstr.c\
 		$(STR_DIR)ft_strsub.c\
 		$(STR_DIR)ft_strtrim.c\
